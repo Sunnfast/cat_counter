@@ -1,17 +1,25 @@
 # cat counter main with new funny and insulting print lines!
-print('How many cats do you have?')
-numCats = input()
-try:
-    if int(numCats) >= 4:
-        print('That is a lot of cats!')
-    elif int(numCats) < 0:
-        print('Negative cats do not count, you freak.')
-    elif int(numCats) == 0:
-        print('Zero.... so sad.')
-    elif int(numCats) == 1:
-        print('Just one? Your kitty needs a friend!')
-    else:
-        print('PATHETIC! That is not enough cats still.')
-except ValueError:
-    print('You did not enter a number.')
 
+import sys
+
+while True:
+    
+
+    print('How many cats do you have? To quit type in "quit".')
+    numCats = input()
+    if numCats == "quit":
+        sys.exit()
+    else:
+        try:
+            if int(numCats) >= 4:
+                print('That is a lot of cats!')
+            elif int(numCats) < 0:
+                print('Negative cats do not count, you freak.')
+            elif int(numCats) == 0:
+                print('Zero.... so sad.')
+            elif int(numCats) == 1:
+                print('Just one? Your kitty needs a friend!')
+            else:
+                print('PATHETIC! That is not enough cats still.')
+        except ValueError:
+            print('You did not enter a number.')
